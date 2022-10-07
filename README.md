@@ -6,9 +6,12 @@
 # Rules
 1.) This is a Beginner Repository for Hackers starting their Open Source Journey.
 
-2.) Add your Valuable Websites and Games by making separate folder. If possible Add Hosted working website link too. 
+2.) Add your Valuable Websites and Games by making separate folder. 
 
-3.) All valid PRs will be Merged 🎉🎉
+3.) If possible Add Hosted working website link too. 
 
-4.) Don't forget to Star this Repo.
+4.) All valid PRs will be Merged 🎉🎉
 
+5.) Don't forget to Star this Repo.
+
+#Happy Hacking
