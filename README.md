@@ -8,5 +8,5 @@
 
 2.) Add your Valuable Websites and Games by making separate folder.
 
-3.) All valid PRs will be Merged 🎊😎
+3.) All valid PRs will be Merged 🎉🎉
 
