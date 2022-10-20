@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fafafa;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+.container {
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  padding: unset;
+  border: unset;
+  background: unset;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+}
+
+/* Nav section */
+nav {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  height: 5.3rem;
+  line-height: 5.3rem;
+  width: 100%;
+  border-bottom: 0.1em solid #dbdbdb;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: auto 1.7fr 0.8fr;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logo > img {
+  vertical-align: middle;
+}
+
+.search {
+  background: #fafafa;
+  height: 3.2rem;
+  width: 25rem;
+  padding: 0 4px;
+  border: 1.2px solid #dbdbdb;
+  border-radius: 3.2px;
+  justify-self: center;
+}
+
+.search::placeholder {
+  text-align: center;
+  color: #808080;
+}
+
+.nav-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links img {
+  height: 2.2rem;
+  color: #252525;
+}
+
+/* Bio section */
+.bio {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 3.2rem 3.2rem 3.2rem;
+  border-bottom: 0.2px solid #dbdbdb;
+  margin-top: 8rem;
+  margin-bottom: 3.2rem;
+}
+
+#profilePhotoInput {
+  display: none;
+}
+
+.profile-photo {
+  background: #000;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-photo img:hover {
+  opacity: 0.7;
+}
+
+.profile-info .name {
+  font-size: 2.72rem;
+  color: #545454;
+  margin-bottom: 0;
+}
+
+.profile-info .about {
+  font-size: 1.92rem;
+  color: #545454;
+}
+
+.profile-info button {
+  background-color: #0095f6;
+  color: #fff;
+  font-size: 1.76rem;
+  width: 9.6rem;
+  height: 3.2rem;
+}
+
+.profile-info button:hover {
+  background-color: #0081d6;
+}
+
+.edit-bio-form input {
+  width: 50%;
+  height: 3.2rem;
+  border: 1.6px solid #dbdbdb;
+  border-radius: 3.2px;
+  padding: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.edit-bio-form button {
+  margin: 1.6rem 1.6rem 0 0;
+}
+
+.edit-bio-form .cancel-button {
+  background-color: #890000;
+}
+
+#addPhotoInput {
+  display: none;
+}
+/* Add and clear button */
+.clear-button,
+.add-photo-button {
+  z-index: 5;
+  position: fixed;
+  cursor: pointer;
+  margin: 0;
+}
+
+.add-photo-button {
+  right: 8rem;
+  transform: scale(3);
+  font-size: 1.6rem;
+  background: linear-gradient(to bottom right, #000, #000);
+  color: transparent;
+  bottom: 8rem;
+  background-clip: text;
+}
+
+.clear-button {
+  right: 7.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  bottom: 18rem;
+}
+
+/* Gallery section */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 2.72rem;
+  column-gap: 1.6rem;
+  justify-items: center;
+  margin-bottom: 2.4rem;
+}
+
+.empty-gallery {
+  color: #444;
+  font-size: 1.8rem;
+  grid-column: 1/-1;
+}
+
+.item {
+  height: 28rem;
+  width: 28rem;
+  background: #000;
+  cursor: pointer;
+  position: relative;
+}
+
+.item-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.item:hover .item-image {
+  opacity: 0.7;
+}
+
+.delete-button {
+  opacity: 0;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  padding: 1.6px 4.8px;
+  background-color: #890000;
+  color: #fff;
+  border: 1px solid #c8c8c8;
+  transform: translate(50%, -50%) scale(1.5);
+}
+.delete-button:hover {
+  background-color: #670000;
+  color: #fff;
+}
+
+.item:hover .delete-button {
+  opacity: 1;
+}
+
+#loader {
+  width: 6rem;
+  height: 6rem;
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #3498db;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 46%;
+  top: 50%;
+  z-index: 10;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 9;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: #f3f3f3;
+  padding: 3rem 4rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.modal p {
+  font-size: 1.6rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.modal button {
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-no {
+  background-color: #0081d6;
+  margin-right: 2rem;
+}
+
+.btn-yes {
+  background-color: rgb(228, 23, 23);
+}
