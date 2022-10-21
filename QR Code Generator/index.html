@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <marquee> QRCode Generator    </marquee>
+    </header>
 
     <div class="wrapper">
         <header>
             <h1>QR Code Generator</h1>
-            <p>Enter urls and any text to create QR Code</p>
+            <p>Enter URLs or Text to Create QR Code</p>
         </header>
         <div class="form">
             <input type="text" placeholder="Type here">
@@ -19,10 +22,34 @@
         </div>
         <div class="qr-code active">
             <h2></h2>
-            <img src="#" alt="qrcode">
+            <img src="#" alt="QR-Code">
         </div>
     </div>
-
+ <style>
+    body{
+        background-color: black;
+    }
+    .wrapper{
+        font-size: x-large;
+        margin-left: 500px;
+        color: aquamarine;
+    }
+    img{
+        margin-left: 180px;
+        margin-top: auto;
+    }
+    p{
+        font-family: 'Courier New', Courier, monospace;
+    }
+     .form{
+        margin-left: 100px;
+        margin-top: 100px;
+        }
+        marquee{
+            color: aliceblue;
+            font-size: medium;
+        }
+ </style>
 
     <script src="script.js"></script>
 </body>
